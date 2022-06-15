@@ -17,11 +17,9 @@ body {
 
 
 .sidebar {
-    display: grid;
-    grid-template-columns: (1);
-    grid-template-rows: (2 25px 100px);
+    display: block;
+    grid-template-rows: 50vh 50vh;
     justify-content: center;
-    align-items: center;
     width: 25vw;
     height: 100vh;
     color: var(--midColor2);
@@ -29,16 +27,24 @@ body {
     border: 5px solid var(--lightColor);
 }
 
-.sidebar h1 {
-    font-size: 32px;
+.sidebar ul li{
+    font-size: 24px;
+    text-align:center;
+    margin: 20px;
+   
+}
 
+.sidebar h1 {
+    font-size: 48px;
+    margin-top: 40vh;
+    text-align:center;
+   
 }
 
 .sidebar span {
     color: var(--midColor3);
     font-family: "Expletus Sans";
     font-weight: 700;
-    font-style: bold;
 }
 
 .content {
