@@ -1,1 +1,32 @@
 
+:root {
+    --darkColor: #1E1E24;
+    --lightColor: #E0E0E0;
+    --midColor1: #607B7D;
+    --midColor2: #87A330;
+    --midColor3: #B5FFE1;
+}
+
+.container {
+    display:flex;
+}
+
+
+.sidebar {
+    width: 25vw;
+    height: 100vh;
+    color: var(--midColor2);
+    background: var(--darkColor);
+    border: 5px solid var(--lightColor);
+}
+
+.content {
+    width: 75vw;
+    height: 100vh;
+    left: 200px;
+    border: 5px solid var(--ligthColor);
+    background: var(--darkColor);
+    color: var(--midColor2);
+    background: var(--darkColor);
+    border: 5px solid var(--midColor3);
+}
