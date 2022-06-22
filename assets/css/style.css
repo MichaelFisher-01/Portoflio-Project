@@ -1,17 +1,18 @@
 
 :root {
-    --BgDark: #D1E3DD;
+    --bgDark: #E7EFED;
     --bgLight: #FFFFFF;
-    --textColor: black;
-    --textEmph: #87A330;
-    --lineColor: #474647;
+    --textClrDark: #1C3041;
+    --textClrLight: #b6b2c2;
+    --textEmph: #04E824;
+    --lineColor: #04724d;
 }
 
 body {
-    font-family: "Prompt";
+    font-family: "Prompt"; 
 }
 
-.container {
+.container { 
     display:flex;
 }
 
@@ -21,9 +22,9 @@ body {
     justify-content: center;
     width: 20vw;
     height: 100vh;
-    color: var(--textColor);
-    background: var(--BgDark);
-    border: 5px solid var(--bgLight);
+    color: var(--textClrDark);
+    background: var(--bgLight);
+    border-right: 1px solid var(--lineColor);
 }
 
 .sidebar ul li{
@@ -50,14 +51,15 @@ body {
     width: 80%;
     height: 100vh;
     border: 5px solid var(--ligthColor);
-    background: var(--BgDark);
-    color: var(--midColor2);
-    background: var(--BgDark);
+    background: var(--bgDark);
+    color: var(--textClrDark);
+    background: var(--bgDark);
     border: 5px solid var(--midColor3);
 }
 
 .homeContainer {
     display: flex;
+    position: relative;
     align-items: center;
     height: 100%;
     margin-left: 10px;
@@ -65,18 +67,41 @@ body {
     padding: 25px;
 }
 
+.homeContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 10px solid var(--lineColor);
+    
+}
+
 .row {
     display: flex;
     height: 25%;
     width: 100%;
+    padding: 15px;
+    margin: 20px;
+    background: var(--bgLight);
+    border-radius: 8px;
 }
 
 .home-text {
     flex: 0 0 60%;
+    position: relative;
     max-width: 60%;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid yellow;
+    margin-left: 10px;
+}
+
+.home-text::before {
+    content: '';
+    position: absolute;
+    height: 35px;
+    width: 85px;
+    top: -22px;
+    left: -32px;
+    border-top: 8px solid var(--lineColor);
+    border-left: 8px solid var(--lineColor);
 }
 
 .home-text h1 {
@@ -103,11 +128,22 @@ body {
 }
 
 .homeImage {
+    position: relative;
     flex: 0 0 40%;
     max-width: 40%;
     margin: auto;
     text-align: center;
+}
 
+.homeImage::after {
+    content: '';
+    position: absolute;
+    height: 35px;
+    width: 100px;
+    bottom: -16px;
+    right: -10px;
+    border-bottom: 8px solid var(--lineColor);
+    border-right: 8px solid var(--lineColor);
 }
 
 .homeImage img {
