@@ -1,10 +1,10 @@
 
 :root {
-    --darkColor: #1E1E24;
-    --lightColor: #E0E0E0;
-    --midColor1: #607B7D;
-    --midColor2: #87A330;
-    --midColor3: #B5FFE1;
+    --BgDark: #D1E3DD;
+    --bgLight: #FFFFFF;
+    --textColor: black;
+    --textEmph: #87A330;
+    --lineColor: #474647;
 }
 
 body {
@@ -18,13 +18,12 @@ body {
 
 .sidebar {
     display: block;
-    grid-template-rows: 50vh 50vh;
     justify-content: center;
-    width: 25vw;
+    width: 20vw;
     height: 100vh;
-    color: var(--midColor2);
-    background: var(--darkColor);
-    border: 5px solid var(--lightColor);
+    color: var(--textColor);
+    background: var(--BgDark);
+    border: 5px solid var(--bgLight);
 }
 
 .sidebar ul li{
@@ -35,47 +34,84 @@ body {
 }
 
 .sidebar h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-top: 40vh;
     text-align:center;
    
 }
 
 .sidebar span {
-    color: var(--midColor3);
+    color: var(--textEmph);
     font-family: "Expletus Sans";
     font-weight: 700;
 }
 
 .content{
-    width: 75vw;
+    width: 80%;
     height: 100vh;
     border: 5px solid var(--ligthColor);
-    background: var(--darkColor);
+    background: var(--BgDark);
     color: var(--midColor2);
-    background: var(--darkColor);
+    background: var(--BgDark);
     border: 5px solid var(--midColor3);
 }
 
 .homeContainer {
-    margin-top: 25vh;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
     margin-left: 10px;
     margin-right: 10px;
     padding: 25px;
-    position: relative;
-    border: 2px solid green;
 }
 
-.home {
-    width: 100vw;
-    height: 85vh;
+.row {
+    display: flex;
+    height: 25%;
+    width: 100%;
+}
+
+.home-text {
+    flex: 0 0 60%;
+    max-width: 60%;
+    justify-content: center;
+    align-items: center;
     border: 2px solid yellow;
-    
 }
 
-.home img {
-    height: 300px;
-    width: 400px;
+.home-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    margin-left: -18px;
+    position: relative;
+}
+
+.home-text h1::after {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 25px;
+    border-bottom: 2px solid var(--lineColor);
+    width: 100px;
+    border-radius: 10px;
+}
+
+.home-text p {
+    font-size:   24px;
+    margin-left: 16px;
+
+}
+
+.homeImage {
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.homeImage img {
+    height:  300px;
+    max-width: 100%;
+    border-radius: 10px;
 }
