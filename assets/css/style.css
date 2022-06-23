@@ -11,7 +11,12 @@
 
 }
 
-html, body {
+html {
+    height: 100%;
+    position: relative;
+}
+
+body {
     font-family: "Ubuntu"; 
     height: 100%;
     background-color: var(--bgDark);
@@ -20,12 +25,14 @@ html, body {
 .container { 
     display: flex;
     height: 100%;
+   
 }
 
 .row {
     display: flex;
     width: 80vw;
-    border: 2px solid yellow;
+    min-width: 1180px;
+    max-width: 1550px;
 }
 
 .content{
@@ -33,27 +40,21 @@ html, body {
     width: 80vw;
     border: 5px solid var(--ligthColor);
     color: var(--textClrDark);
+    padding-left: 250px;
 }
 
 /* Sidebar Stlying */
-.sidebarHolder {
-    width: 15%;
-    min-height: 100%;
-    color: var(--textClrDark);
-    background: var(--bgLight);
-    border-right: 1px solid var(--lineColorDk);
-}
 
 .sidebar {
     display: block;
     justify-content: center;
-    width: 15%;
-    min-height: 100%;
+    height: 100%;
     color: var(--textClrDark);
     background: var(--bgLight);
     border-right: 1px solid var(--lineColorDk);
+    color: var(--textClrDark);
     position: fixed;
-    width: 15%;
+    width: 250px;
 
 }
 
@@ -88,7 +89,7 @@ html, body {
 
 /* Home Section Stlying */
 .homeContainer {
-    display: none;
+    display: flex;
     align-items: center;
     height: 100vh;
     padding: 25px;
@@ -101,6 +102,7 @@ html, body {
     padding: 15px;
     background: var(--bgLight);
     border-radius: 8px;
+    margin-left: 200px;
 }
 
 .homeContainer::before {
@@ -115,7 +117,6 @@ html, body {
     flex: 0 0 60%;
     position: relative;
     max-width: 60%;
-    margin-left: 10px;
 }
 
 .home-text::before {
@@ -123,8 +124,8 @@ html, body {
     position: absolute;
     height: 35px;
     width: 85px;
-    top: -22px;
-    left: -32px;
+    top: -20px;
+    left: -22px;
     border-top: 8px solid var(--lineColorDk);
     border-left: 8px solid var(--lineColorDk);
 }
@@ -167,7 +168,7 @@ html, body {
     height: 35px;
     width: 100px;
     bottom: -20px;
-    right: -10px;
+    right: -18px;
     border-bottom: 8px solid var(--lineColorDk);
     border-right: 8px solid var(--lineColorDk);
 }
@@ -216,11 +217,29 @@ html, body {
 }
 .about-text {
     font-size: 16px;
+    margin-bottom: 50px;
     padding-top: 15px;
     padding-left: 35px;
 }
 
-.skillCards {
+.cardContainer {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 375px 375px;
+    grid-template-rows: repeat(4, 225px);
+    margin: auto;
+    border: 2px solid red;
+}
+
+.skillCard h3 {
+    font-family: "Josefin Sans";
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 2px solid green;
+}
+
+.skillCard li{
+    list-style-type: circle;
+    list-style-position: inside;
+    padding-left: 30px;
 }
