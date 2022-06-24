@@ -6,6 +6,7 @@
     --textClrDark: #1C3041;
     --textClrLight: #b6b2c2;
     --textEmph: #04E824;
+    --altColor: #35605A;
     --lineColorDk: #04724d;
     --lineColorLg: #B6CEC8;
 
@@ -36,6 +37,8 @@ body {
 }
 
 .content{
+    display: flex;
+    flex-wrap: wrap;
     height: 100vh;
     width: 80vw;
     border: 5px solid var(--ligthColor);
@@ -240,7 +243,7 @@ body {
     margin-bottom: 15px;
     border: 5px solid green;
     border-radius: 25px 25px 0px 0px;
-    background: black;
+    background: var(--altColor);
     color: white;
 }
 
@@ -249,7 +252,7 @@ body {
     position:absolute;
     top: 25px;
     left: -5px;
-    background: var(--bgLight);
+    background: white;
     height: 175px;
     width: 365px;
     border: 5px solid var(--lineColorDk);
@@ -261,4 +264,63 @@ body {
     list-style-type: circle;
     list-style-position: inside;
     padding-left: 30px;
+}
+
+
+/* Work Stylings */
+
+.workContainer {
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+    padding-top: 35px;
+    padding-left: 35px;
+}
+
+.workContainer h2 {
+    font-size: 72px;
+    font-family: "Josefin Sans";
+    position: relative;
+}
+
+.workContainer h2::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 250px;
+    background: var(--lineColorDk);
+    bottom: 0px;
+    left: -35px;
+}
+
+.workTitle {
+    position: relative;
+    width: 100%;
+}
+
+.workTitle::after {
+    position: absolute;
+    border-radius: 0px 8px 8px 0px;
+
+}
+
+.workCard {
+    display:flex;
+    flex-wrap: wrap;
+    width: 260px;
+    height: 260px;
+    background: red;
+}
+
+.cardImage {
+    width: 100%;
+}
+
+.cardText {
+    width: 100%;
+}
+
+.cardSkils {
+    width: 100%;
 }

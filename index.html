@@ -18,16 +18,17 @@
             <div class="sidebar">
                 <h1>Fisher<span>Design</span></h1>
                 <ul>
-                    <li>Home</li>
-                    <li>About Me</li>
-                    <li> Work</li>
-                    <li>Contact Me</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#work">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </div>
         </div> 
     <!-- Must include my name, Recent Photo, links to sections about myself, my work and contact info-->
         <div class="content">
-            <div class = "homeContainer">
+<!-- HOME SECTION-->
+            <div id="home" class = "homeContainer">
                 <div class = "row">
                     <div class="homeRowContent">
                         <div class = "home-text">                 
@@ -40,7 +41,8 @@
                     </div>
                 </div>
             </div>
-            <div class ="aboutContainer">
+<!-- ABOUT ME SECTION-->
+            <div id="aboutMe" class ="aboutContainer" >
                 <h2 class = "aboutTitle">About Me</h2>
                 <div class="row">
                     <div class="about-text">
@@ -142,9 +144,31 @@
                             </div>
                         </div>
                     </div>
-                  </div>
                 </div>
             </div>
+<!-- Work Section-->
+                <div id="work" class="workContainer">
+                    <div class="row">
+                        <div class="workTitle">
+                            <h2 class="workTitle">Prior Projects</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="workCardContainer">
+                            <div class="workCard">
+                                <div class="cardImage">
+                                    <img jre="#" alt ="placeholder">
+                                </div>
+                                <div class="cardText">
+                                    <p>Example Text</p>
+                                </div>
+                                <div class="cardSkills">
+                                    <p>CSS HTML JAVASCRIPT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
     <!--When the "work" section is clicked UI scrolls to a section 
