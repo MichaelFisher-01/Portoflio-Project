@@ -308,19 +308,69 @@ body {
 .workCard {
     display:flex;
     flex-wrap: wrap;
-    width: 260px;
-    height: 260px;
-    background: red;
+    width: 280px;
+    height: 480px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+}
+
+.workCardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 30px;
+    margin-top: 35px;
+    width: 100vw;
 }
 
 .cardImage {
     width: 100%;
+    height: 250px;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .cardText {
     width: 100%;
+    height: 150px;
 }
 
-.cardSkils {
+.cardText h3 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.cardSkills2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
     width: 100%;
+    height: 80px;
+    color: white;
+    background: var(--altColor);
+    font-size: 32px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.cardSkills3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    color: white;
+    background: var(--altColor);
+    font-size: 32px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.cardSkills p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
