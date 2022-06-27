@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:ital@1&family=Josefin+Sans:wght@700&family=Ubuntu&display=swap" rel="stylesheet">
 </head>
-<body class = "screen">
+<body>
     <!-- When the links are clicked in the navigation they should go to each section-->
     <div class="container">
         <div class="sidebarHolder">
@@ -28,9 +28,9 @@
     <!-- Must include my name, Recent Photo, links to sections about myself, my work and contact info-->
         <div class="content">
 <!-- HOME SECTION-->
-            <div id="home" class = "homeContainer">
+            <div id="home" class = "flexContainer">
                 <div class = "row">
-                    <div class="homeRowContent">
+                    <div class="rowContent">
                         <div class = "home-text">                 
                             <h1>My name is Michael Fisher</h1>
                             <p>I am currently a programming student at the Unviersity of Denver. Feel free to review my coding projects so far and reach out if anything peaks your interest.</p>
@@ -42,8 +42,8 @@
                 </div>
             </div>
 <!-- ABOUT ME SECTION-->
-            <div id="aboutMe" class ="aboutContainer" >
-                <h2 class = "aboutTitle">About Me</h2>
+            <div id="aboutMe" class ="blockContainer" >
+                <div class="title"><h2>About Me</h2></div>
                 <div class="row">
                     <div class="about-text">
                         <p> Computers have always been a hobby of mine, I have mostly just tinkered with the hardware side by building computers and putting together keyboards. I wanted to dive deeper into these interests by learning how to control these devices after being put together. In that pursuit I am attending University of Denver’s coding program. Once completed in October I will have the following skills at my disposal.</p>
@@ -66,9 +66,6 @@
                         <div class="skillCard">
                             <h3>Browser Based Technologies</h3>
                             <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
                                 <li>jQuery</li>
                                 <li>Responsive Design</li>
                                 <li>Bootstrap</li>
@@ -147,10 +144,10 @@
                 </div>
             </div>
 <!-- Work Section-->
-            <div id="work" class="workContainer">
+            <div id="work" class="blockContainer">
                 <div class="row">
-                    <div class="workTitle">
-                        <h2 class="workTitle">Prior Projects</h2>
+                    <div class="title">
+                        <h2>Work</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -255,8 +252,23 @@
 <!-- Bonus Card End-->
                         </div>
                     </div>
+                </div> <!-- Work Container Closing Div-->
+                <div id="contact" class = "flexContainer">
+                    <div id="work" class="workContainer">
+                        <div class="row">
+                            <div class="title">
+                                <h2 class="title">Contact</h2>
+                            </div>
+                        </div>
+                        <div class="contactRowContent">
+                            <div class = "contact-text">                 
+                                <h1>My name is Michael Fisher</h1>
+                                <p>I am currently a programming student at the Unviersity of Denver. Feel free to review my coding projects so far and reach out if anything peaks your interest.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div><!--Content Closing Div-->
         </div>
     <!--When the "work" section is clicked UI scrolls to a section 
         with titled images of developer's application -->
