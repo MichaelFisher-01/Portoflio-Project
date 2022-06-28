@@ -23,39 +23,42 @@ body {
     background-color: var(--bgDark);
 }
 
-.container { 
+.flexContainer {
     display: flex;
-    height: 100%;
-   
+    align-items: center;
+    height: 100vh;
+}
+
+.blockContainer {
+    display: block;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 80vw;
+    padding-top: 20px;
+    min-height: 1920px;
 }
 
 .row {
     display: flex;
     justify-content: center;
-    width: 75vw;
+    padding: 0 5% 0 5%;
+    width: 80vw;
     max-width: 1550px;
 }
 
 .content{
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
-    width: 80vw;
-    border: 5px solid var(--ligthColor);
+    width: 85vw;
     color: var(--textClrDark);
-    padding-left: 15vw;
+    padding-left: 15%;
 }
 
 .title {
-    position: relative;
     width: 100%;
+    padding-left: 15px;
 }
 
-.title::after {
-    position: absolute;
-    border-radius: 0px 8px 8px 0px;
-
-}
 
 .title h2 {
     font-size: 72px;
@@ -63,14 +66,15 @@ body {
     position: relative;
 }
 
-.title h2::after {
+.title h2::after{
     content: '';
     position: absolute;
-    height: 5px;
-    width: 250px;
-    background: var(--lineColorDk);
+    border-radius: 0 8px 8px 0px;
     bottom: 0px;
-    left: -37px;
+    left: -13px;
+    height: 5px;
+    width:  120px;
+    background: var(--lineColorDk);
 }
 
 .rowContent {
@@ -105,25 +109,7 @@ body {
     border-right: 8px solid var(--lineColorDk);
 }
 
-.flexContainer {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    padding: 25px;
-    
-}
-
-.blockContainer {
-    display: block;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 100vh;
-    padding-top: 35px;
-    padding-left: 35px;
-}
-
 .mainText {
-    flex: 0 0 60%;
     position: relative;
     max-width: 60%;
 }
@@ -131,30 +117,42 @@ body {
 .mainText h1 {
     font-size: 48px;
     margin-bottom: 15px;
-    margin-left: 0px;
+    margin-left: -5px;
     position: relative;
 }
 
-.mainText h1::after {
+.mainText h1:after {
     content: '';
     position: absolute;
-    top: 55px;
-    left: 10px;
-    border-bottom: 2px solid var(--lineColorDk);
-    width: 150px;
-    border-radius: 10px;
+    border-radius: 8px;
+    bottom: -10px;
+    left: 15px;
+    height: 2px;
+    width:  100px;
+    background: var(--lineColorDk);
+
 }
 
 .mainText p {
     font-size:   24px;
-    margin-left: 16px;
-    margin-top: 8px;
+    margin-left: 32px;
+    margin-top: 20px;
 }
 
 .center {
     text-align: center;
     margin-left: 25%;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color:black;
+    text-decoration: none;
+}
+ 
 
 /* Sidebar Stlying ---------------------------------------------------------------*/
 
@@ -168,6 +166,7 @@ body {
     color: var(--textClrDark);
     position: fixed;
     width: 15vw;
+    min-width: 215px;
 
 }
 
@@ -184,7 +183,7 @@ body {
     font-size: 22px;
     width: 50%;
     margin: 10px 0px 10px 0px;
-    border-bottom: 1px solid var(--lineColorLg);
+    border-bottom: 1px solid var(--lineColorDk);
 }
 
 .sidebar h1 {
@@ -227,7 +226,6 @@ body {
     grid-template-rows: repeat(4, 200px);
     grid-column-gap: 150px;
     grid-row-gap: 15px;
-    margin: auto;
 }
 
 .skillCard h3 {
@@ -269,11 +267,20 @@ body {
     transform: scale(1.10);
 }
 
+.workCardContainer {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 450px 450px;
+    grid-row-gap: 15px;
+    margin-top: 35px;
+    width: 100vw;
+}
+
 .workCard {
     display:flex;
     flex-wrap: wrap;
     width: 280px;
-    height: 425px;
+    height: 450px;
     text-align: center;
     background: white;
     border-radius: 15px;
@@ -281,43 +288,25 @@ body {
     cursor: pointer;
 }
 
-.workCardContainer {
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 30px;
-    margin-top: 35px;
-    width: 100vw;
-}
-
-.workCard a {
-    text-decoration: none;
-}
-
-.workCard a:visited {
-    color:black;
-    text-decoration: none;
-}
- 
 .cardImage {
     width: 100%;
-    height: 175px;
+    height: 200px;
 }
 
 .cardImage img {
     width: 100%;
-    height: 175px;
+    height: 200px;
     border: 2px solid white;
     border-radius: 15px 15px 0px 0px;
 }
 
 .cardText {
     width: 100%;
-    height: 150px;
+    height: 200px;
 }
 
 .cardText h3 {
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 8px;
 }
 
@@ -327,10 +316,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 50px;
     color: white;
     background: var(--altColor);
-    font-size: 28px;
+    font-size: 20px;
     border-radius: 0px 0px 15px 15px;
 }
 
@@ -340,11 +329,12 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 50px;
     color: white;
     background: var(--altColor);
-    font-size: 28px;
+    font-size: 20px;
     border-radius: 0px 0px 15px 15px;
+    border: 2px solid yellow;
 }
 
 .cardSkills p {
@@ -374,3 +364,64 @@ body {
     margin: 0 15px;
 
 }
+
+/* Responsive Styles Size 1280 x 800 -------------------------------- */
+
+@media screen and (max-width: 1280px) {
+    .rowContent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 200px;
+        text-align: center;
+    }
+
+    .mainText {
+        align-items: center;
+        margin: 0 auto 0 auto;
+    }
+
+    .rowContent h1 {
+        font-size: 32px;
+    }
+
+    .rowContent img{
+        width: 250px;
+        padding-bottom: 20px;
+
+    }
+
+    .title h2{
+        font-size: 48px;
+        padding-left: 25px;
+    }
+
+    .title h2::after {
+        left: 8px;
+    }
+
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 350px 350px;
+        grid-template-rows: repeat(4, 100px);
+        grid-column-gap: 150px;
+        grid-row-gap: 15px;
+        border: 2px solid red;
+    }
+
+    .skillCard h3 {
+        border-radius: 25px;
+    }
+    
+    .skillCard h3::after {
+        background: red;
+    }
+    
+    .skillCard ul {
+        display: none;
+    }
+
+    .skillCard h3:hover .skillCard h3::after {
+        display: blue;
+    }
+}
+
